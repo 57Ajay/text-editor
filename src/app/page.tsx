@@ -1,9 +1,11 @@
-import Editor from "@/components/Editor";
-
+"use client"
+import { Button } from "@/components/ui/button";
+import { useRouter } from "next/navigation";
 export default function Home() {
+  const router = useRouter();
   return (
     <div>
-        <Editor editorType={"create"}  />
+        <Button onClick={()=> router.push("/create-blog")}> Create a blog</Button>
     </div>
   );
 }
